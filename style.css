@@ -62,3 +62,7 @@ a:hover {
     color: blue;
     text-decoration: none;
 }
+a:visited {
+    color: deeppink;
+    text-decoration: none;
+}
