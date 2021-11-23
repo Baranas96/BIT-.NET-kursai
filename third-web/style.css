@@ -4,40 +4,39 @@
 body {
     margin: 0px;
 }
-p {
+.container {
     margin: 0px;
 }
 header {
-    width: 100%;
-    height: 50px;
+    background-color: yellow;
+    padding: 30px;
+}
+.col-7 {
+    justify-content: start;
+}
+.col-7 > div > div {
+    display: inline-block;
+}
+.col-1 {
+    background-color: lime;
+}
+.col-5 > div > div {
+    display: inline-block;
+}
+.col-sm {
+    width: 80px;
+    background-color: lime;
     text-align: center;
-    align-items: center;
-    height: 50px;
+    margin-left: 5%;
 }
-.main-header {
-    background-color: royalblue;
-    float: left;
-    width: 60%;
+.col-sm:first-child {
+    background-color: magenta;
 }
-.image {
-    float: left;
+.calendar {
+    display: inline-flexbox;
+    width: 20%;
 }
-.name {
-    float: left;
-    font-size: 20px;
-}
-.whats-this {
-    float: left;
-}
-nav{
-    justify-content: space-between;
-}
-.button {
-    float: left;
-    background-color: white;
-    border: none;
-}
-.button1 {
-    float: left;
-    padding-left: 50px;
+.content {
+    display: inline-block;
+    width: 79%;
 }

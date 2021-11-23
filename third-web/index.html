@@ -1,32 +1,65 @@
-<!DOCTYPE html>
+<!DOCTYdivE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta httdiv-equiv="X-UA-Comdivatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap-grid.css">
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
     <header>
-        <div class="main-header">
-            <p class="image">Image</p>
-            <p class="name">Most Popular Stories</p>
-            <p class="whats-this"><a href="">What's this?</p>
+        <div class="row">
+            <!-- first column in header -->
+            <div class="col-7">
+                <!-- three columns on left -->
+                <div>
+                    <div class="col-1 image">Image</div>
+                    <div class="col-4 heading">Most Popular stories</div>
+                    <div class="col-3 next"><a href="">Whats next</a></div>
+                </div>
+            </div>
+            <!-- second column in header -->
+            <div class="col-5">
+                <!-- three columns on right -->
+                <div>
+                    <div class="col-sm now">Now</div>
+                    <div class="col-sm">Today</div>
+                    <div class="col-sm">Tomorrow</div>
+                </div>
+            </div>
         </div>
-        <nav>
-            <div class="button">
-                <p>Now</p>
-            </div>
-            <div class="button1">
-                <p>Today</p>
-            </div>
-            <div class="button1">
-                <p>This week</p>
-            </div>
-        </nav>
     </header>
-    
+
+    <main class="container">
+        <div class="row">
+            <!-- first column in a row -->
+            <div class="calendar">
+                <!-- three rows in calendar -->
+                <div class="prop">Prop it</div>
+                <div class="date">11</div>
+                <div class="drop">Drop it</div>
+            </div>
+            <!-- second column in a row -->
+            <div class="content">
+                <!-- four rows in content -->
+                <div class="row title">C-Span ranks presidents: Abe still on top, new shocker at the bottom</div>
+                <div class="row details">
+                    <!-- two columns in row -->
+                    <div class="author">Posted by: <a href="">Author</a></div>
+                    <div class="date">6 hours, 32 minutes ago in <a href="" class="href">Politics</a></div>
+                </div>
+                <div class="row paragraph">Today is President's day, that sacred holiday one the United States calendar devoted to honoring the births of the two most important presidents in ...</div>
+                <div class="row links">
+                    <!-- three links so three columns -->
+                    <div><a href="" class="href">More</a></div>
+                    <div><a href="" class="href">Discuss</a> (0)</div>
+                    <div><a href="" class="href">More</a> Read Full Storyat latimesblogs.latimes.com</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
 </body>
 </html>
