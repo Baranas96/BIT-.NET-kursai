@@ -161,6 +161,14 @@ p {
   font-size: 0.8em;
   color: rgb(102, 102, 102);
 }
+a:link, a:visited, a:active {
+    text-decoration: none;
+    color: rgb(102, 102, 102);
+}
+a:hover {
+    text-decoration: underline;
+    color: rgb(75, 75, 75);
+}
 .photo > img {
   width: 90%;
   max-width: 12em;
@@ -173,7 +181,6 @@ p {
   /* For mobile phones: */
   .person {
     width: 50%;
-  }
-  .person div:nth-child() {
+    padding-bottom: 1rem;
   }
 }
