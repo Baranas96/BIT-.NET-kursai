@@ -86,7 +86,8 @@ p {
 .mission {
   float: left;
   font-size: 1rem;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande","Lucida Sans", Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 .text::after {
   content: "";
@@ -126,8 +127,7 @@ p {
     */
   body {
     max-width: 1400px;
-    margin: auto;
-    vertical-align: center;
+    margin: 0 auto;
   }
   .values {
     padding-right: 40px;
@@ -153,7 +153,7 @@ p {
   text-transform: capitalize;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  font-size: 1em;
+  font-size: 0.88em;
   font-weight: bolder;
   color: rgb(75, 75, 75);
 }
@@ -161,13 +161,15 @@ p {
   font-size: 0.8em;
   color: rgb(102, 102, 102);
 }
-a:link, a:visited, a:active {
-    text-decoration: none;
-    color: rgb(102, 102, 102);
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: rgb(102, 102, 102);
 }
 a:hover {
-    text-decoration: underline;
-    color: rgb(75, 75, 75);
+  text-decoration: underline;
+  color: rgb(75, 75, 75);
 }
 .photo > img {
   width: 90%;
