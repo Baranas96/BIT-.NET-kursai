@@ -41,14 +41,14 @@
 .col-sm {
     width: 50%;
 }
+.col-sm-2 {
+    width: 20%;
+}
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     [class*="col-"] {
         width: 100%;
     }
-}
-body {
-    margin: 2em 0em 0em 3em;
 }
 main {
     max-width: 1200px;
@@ -119,4 +119,30 @@ h2 {
     .container {
         flex-direction: column-reverse;
     }
+    .photo {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+@media only screen and (min-width: 768px) {
+    /* For mobile phones: */
+    body {
+    margin: 2em 0em 0em 3em;
+    }
+}
+
+/* Pictures at the bottom */
+section {
+    margin: 1em 0em 1em 1em;
+}
+.picture {
+    display: flex;
+    align-items: center;
+    padding: 0.3em;
+    background-color: white;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 5%;
+}
+.picture img {
+    border-radius: 4%;
 }
