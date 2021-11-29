@@ -1,2 +1,1 @@
-# layout-tryout
- 
+BIT .NET kursai
