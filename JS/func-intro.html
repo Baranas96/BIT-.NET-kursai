@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x = 5;
+        if (x%2 == 0){
+            console.log('The number is even')
+        } else {
+            console.log('The number is uneven')
+        }
+
+        let i = 10;
+        while (i < 1000){
+                if (i%2!=0)
+                    console.log('number ' + i + ' is uneven');
+                i += 1;
+        }
+
+        for(let i = 10; i < 1000; i+=1) {
+            if (i%2!=0)
+                console.log('number ' + i + ' is uneven');
+        }
+
+        for(let i = 10; i < 1000; i+=1) {
+            let c = i % 10;
+            let b1 = (i / 10) % 10;
+            let b = Math.floor(b1);
+            let a = Math.floor(i/100)
+            console.log(a,b,c)
+            if (i%2!=0){
+                if (i > 99) {
+                    if (a != b && a != c && b!= c)
+                        console.log('number ' + i + ' is uneven and doesnt have same digits');
+                }
+                else {
+                    if (b != c)
+                    console.log('number ' + i + ' is uneven and doesnt have same digits');
+                }
+            }
+        }
+    </script>
+</body>
+</html>
