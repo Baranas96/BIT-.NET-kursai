@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript loops</title>
+</head>
+<body>
+    <!-- This practice is about for / while loops -->
+    <script>
+        
+        // // first
+        // let i = 0
+        // while (i < 5) {
+        //     console.log("Labas")
+        //     i++
+        // }
+
+        // // second
+        // for (let i=0; i < 5; i++ ) {
+        //     console.log(i)
+        // }
+
+        // // third
+        // for (let i = 0; i<50; i+=10) {
+        //     console.log(i)
+        // }
+
+        // // fourth
+        // for (let i = 49; i<54; i++) {
+        //     console.log(i)
+        // }
+
+        // // fifth
+        // for (let i = 4; i >= 0; i-=1){
+        //     console.log(i)
+        // }
+
+        // // sixth
+        // for (let i = 0; i < 5; i++){
+        //     console.log(Math.floor(Math.random()*11))
+        // }
+        
+        // seventh
+        // let i;
+        // while (i != 5){
+        //     i = Math.floor(Math.random()*11);
+        //     console.log(i);
+        // }
+
+        // // eight
+        // let i = 0;
+        // while (i <= 100){
+        //     let b = Math.floor(Math.random()*11);
+        //     console.log(b);
+        //     i += b;
+        // }
+            
+        // // ninth
+        // let num = 0, i;
+        // while (i != 5 && i != 7){
+        //     i = Math.floor(Math.random()*11);
+        //     console.log(i);
+        //     num += 1;
+        // }
+
+        // // tenth
+        // let c = 2.54;
+        // for (i=1; i<11; i++){
+        //     console.log(i + " coliu yra " + i*c + " centimetru")
+        // }
+        // for (i=1; i<11; i++){
+        //     console.log(i + " centimetru yra " + c/i + " coliu")
+        // }
+
+        // // eleventh
+        // let i = 100;
+        // let p = 2;
+        // let n = 10;
+        // for (let a = 1; a<= n; a++){
+        //     let b = (i*(p/100));
+        //     i = i+p;
+        //     console.log("Metai: " + a + "   Palūkanos: " + b + "   Indėlis: " + i)
+        // }
+
+        // twelfth
+        // let i = 31;
+        // let first = i[0];
+        // let second = i[1];
+        // let reverse = (second * 10) + first;
+        // for (i=31; i<101; i++){
+        //     first = Math.floor((i/10)%10);
+        //     second = Math.floor(i%10);
+        //     reverse = second * 10 + first;
+        //     if (i == (reverse+36) && (second*3) == first){
+        //         console.log(i)
+        //         console.log(reverse)
+        //     }
+        // }
+
+        // thirteenth
+        // rasti skaicius, kuriu pirmas skaicius lyginis ir skaicius nesidalina is 2
+        // for (let i = 2000; i<10000; i++){
+        //     let n = Math.floor(i/1000)%10;
+        //     if (n%2 == 0 && i%998 != 0){
+        //         console.log(i)
+        //     }
+        // }
+        
+        // // fourteenth
+        // for(let i = 0; i < 2022; i++){
+        //     if (((i%4 == 0) && (i%100 != 0)) || (i%400==0)){
+        //         console.log(i)
+        //     }
+        // }
+
+        // // fifteenth
+        // let m = 997, n = 1003;
+        // for (m ; m <= n; m++){
+        //     if ((m%2 == 0) && (m%10 != 0)){
+        //         console.log(m)
+        //     }
+        // }
+        
+        // // sixteen
+        // let i = 595235185;
+        // let l = i.toString().length;
+        // console.log(Math.floor(i/(10**(l-1))));
+
+        // // seventeen
+        // let i = 1234, s = 0;
+        // while (i) {
+        //     s += i % 10;
+        //     i = Math.floor(i / 10);
+        // }
+        // console.log(s);
+        
+        // // eighteen
+        // let i = 1234,
+        //     r = 0,
+        //     l;
+        // while (i) {
+        //     l = i%10;
+        //     r = r*10+l;
+        //     i = Math.floor(i/10);
+        // }
+        // console.log(r)
+        // while (i>0) {
+        //     r += (i % 10)*(10**(i.toString().length-1));
+        //     i = Math.floor(i / 10);
+        // }
+        // console.log(r)
+        
+        // // nineteen
+        // let i = 1265423,
+        //     s = 10,
+        //     b = -1,
+        //     check;
+        // while (i) {
+        //     s = i%10;
+        //     b = i%10;   
+        //     while(i > 0) {
+        //         check = i%10;
+        //         if ((check > b && check > s) || check > b){
+        //             b = check;
+        //         } else if (check < s && check < b) {
+        //             s = check;
+        //         }
+        //         i = Math.floor(i/10);
+        //     }
+        // }
+        // console.log(s, b)
+
+        // // twenty
+        // let p = 10,
+        //     s = 100,
+        //     g = 0,
+        //     m = 0;
+        // while(g < 100000){
+        //     m++;
+        //     g = s * ((1+(p/100))**m);
+        // }
+        // console.log(m, g)
+
+        // // twenty-one
+        // let i = 1,
+        //     n = 0,
+        //     m = 30;
+        // //a 
+        // for (n; n < 20; ++n){
+        //     i = i*2;
+        // }
+        // console.log(i)
+        // b
+        // while(i<m/2){
+        //     n++;
+        //     i = i*2;
+        // }
+        // console.log("puse ezero uzklojo " + n + " diena")
+
+        // // twenty-two
+        // let d = 1, m1 = 3, m = 1, n = 16;
+        // while (m1 <= n) {
+        //     n = n - (m1+m*d);
+        //     d++; 
+        // }
+        // console.log("Sodininkas dirbs " + d + " dienas")
+
+    </script>
+
+</body>
+</html>

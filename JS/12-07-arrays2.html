@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // first
+        let array = [];
+        for (let i = 0; i < 10; i++){
+            let ar = [];
+            for (let a = 0; a < 5; a++){
+                let num = Math.floor(Math.random()*(20-6)+5);
+                ar.push(num);
+            }
+            array.push(ar);
+        }
+        console.log(array);
+
+        // second
+        // a
+        let inst = 0;
+        for (let i = 0; i < 10; i++){
+            let inst1 = 0;
+            for (let p = 0; p < 5; p++){
+                if (array[i][p] > 10){
+                    inst1++;
+                }
+            }
+            inst += inst1;
+        }
+        console.log(inst);
+
+
+    </script>
+</body>
+</html>

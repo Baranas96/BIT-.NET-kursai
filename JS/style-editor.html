@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+
+    </div>
+    <script> 
+
+        function createDiv(id, content) {
+            let newDiv = document.getElementById("main");
+            newDiv.innerHTML += '<div class="' + id + '">' + content + '</div>';
+        }
+
+        createDiv('content', 'Content: <input type="text" id="myText" value="">');
+
+        createDiv("size", "Size:");
+
+        createDiv("style", "Style:");
+
+        createDiv("width", "Width:");
+
+        createDiv("height", "Height:");
+
+        createDiv("align", "Align:");
+
+        createDiv("vertical", "Vertical:");
+
+        createDiv("text-color", "Text Color:");
+
+        createDiv("back-color", "Back Color:");
+
+        createDiv("border-color", "Border Color:");
+
+        createDiv("border-size", "Size:");
+
+        createDiv("padding", "Padding:");
+
+        createDiv("myText", "");
+
+        
+    </script>
+</body>
+</html>

@@ -14,17 +14,22 @@
         } else {
             console.log('The number is uneven')
         }
-
+        // prastesnis variantas
         let i = 10;
         while (i < 1000){
                 if (i%2!=0)
                     console.log('number ' + i + ' is uneven');
                 i += 1;
         }
+        // geresnis variantas
+        let i = 10;
+        while (i < 1000){
+            console.log('number ' + i + ' is uneven');
+            i += 2;
+        }
 
-        for(let i = 10; i < 1000; i+=1) {
-            if (i%2!=0)
-                console.log('number ' + i + ' is uneven');
+        for(let i = 11; i < 1000; i+=2) {
+            console.log('number ' + i + ' is uneven');
         }
 
         for(let i = 10; i < 1000; i+=1) {
@@ -43,6 +48,45 @@
                     console.log('number ' + i + ' is uneven and doesnt have same digits');
                 }
             }
+        }
+
+
+
+        // ----------- 12.01 Lecture ---------------
+        // first example
+        let dayNames = ["monday", "tuesday", "wednesday", "thursday", "friday"];
+        let today = 3;
+        let output = "no such day";
+        for (let i = 0; i <= dayNames.length-1;++i){
+            if (today == i+1){
+                output = dayNames[i]
+            }
+        }
+        console.log(dayNames[i]);
+        
+        
+        // second example
+        let visits = [15,89,87,13,0,15,69];
+        let sum = 0;
+
+        for (let i = 0; i <= dayNames.length-1;++i){
+            if (true){
+                sum += visits[i]
+            }
+        }
+        console.log(dayNames[i]);
+
+
+        // 
+        console.log("<table>");
+        let cols = 5;
+        let rows = 8;
+        for (let i = 0; i < rows; ++i){
+            console.log("   <tr>");
+            for (let j = 0; j < cols; ++j) {
+                console.log("      <td></td>");
+            }
+            console.log("   </tr>");
         }
     </script>
 </body>
