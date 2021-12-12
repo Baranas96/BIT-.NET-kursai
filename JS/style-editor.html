@@ -5,45 +5,83 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .padding {
+            padding-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
     <div id="main">
+        <div id="content" class="padding"></div>
+        <div class="padding">
+            <div id="size"></div>
+            <div id="style"></div>
+        </div>
+        <div class="padding">
+            <div id="width"></div>
+            <div id="height"></div>
+        </div>
+        <div id="align" class="padding"></div>
+        <div id="vertical" class="padding"></div>
+        <div class="padding">
+            <div id="text-color"></div>
+            <div id="back-color"></div>
+            <div id="border-color"></div>
+            <div id="border-size"></div>
+        </div>
+        
+        <div id="padding" class="padding"></div>
+        <div id="myText"></div>
 
     </div>
     <script> 
-
-        function createDiv(id, content) {
-            let newDiv = document.getElementById("main");
-            newDiv.innerHTML += '<div class="' + id + '">' + content + '</div>';
+        // function to get element by id
+        function getId (id) {
+            let x = document.getElementById(id);
+            return x;
         }
 
-        createDiv('content', 'Content: <input type="text" id="myText" value="">');
+        getId("content").innerHTML += 'Content: <input type="text" id = "text-in">';
+        // getId("content").style.display = "block";
 
-        createDiv("size", "Size:");
+        getId("size").innerHTML += 'Size: <input type="text" id = "size-in">';
+        getId("size").style.display = "inline-block";
 
-        createDiv("style", "Style:");
+        getId("style").innerHTML += 'Style: <input type="checkbox" id = "input"> <input type="checkbox" id = "input"> <input type="checkbox" id = "input">';
+        getId("style").style.display = "inline-block";
 
-        createDiv("width", "Width:");
+        getId("width").innerHTML += 'Width: <input type="text" id = "input">';
+        getId("width").style.display = "inline-block";
 
-        createDiv("height", "Height:");
+        getId("height").innerHTML += 'Height: <input type="text" id = "input">';
+        getId("height").style.display = "inline-block";
 
-        createDiv("align", "Align:");
+        getId("align").innerHTML += 'Align: <input type="radio" id = "input" value="left"> <label for="left">HTML</label> <input type="radio" id = "input" value="Middle"> <input type="radio" id = "input" value="Right">';
+        // getId("align").style.display = "block";
 
-        createDiv("vertical", "Vertical:");
+        getId("vertical").innerHTML += 'Vertical: <input type="radio" id = "input" > <input type="radio" id = "input"> <input type="radio" id = "input">';
+        // getId("vertical").style.display = "block";
 
-        createDiv("text-color", "Text Color:");
+        getId("text-color").innerHTML += 'Text Color: <input type="text" id = "input">';
+        getId("text-color").style.display = "inline-block";
 
-        createDiv("back-color", "Back Color:");
+        getId("back-color").innerHTML += 'Back Color: <input type="text" id = "input">';
+        getId("back-color").style.display = "inline-block";
 
-        createDiv("border-color", "Border Color:");
+        getId("border-color").innerHTML += 'Border Color: <input type="text" id = "input">';
+        getId("border-color").style.display = "inline-block";
 
-        createDiv("border-size", "Size:");
+        getId("border-size").innerHTML += 'Border Size: <input type="text" id = "input">';
+        getId("border-size").style.display = "inline-block";
 
-        createDiv("padding", "Padding:");
+        getId("padding").innerHTML += 'Padding: <input type="text" id = "input">';
+        // getId("padding").style.display = "block";
 
-        createDiv("myText", "");
+        getId("myText").innerHTML += '<p></p>';
+        getId("myText").style.display = "flexbox";
 
-        
+
     </script>
 </body>
 </html>
