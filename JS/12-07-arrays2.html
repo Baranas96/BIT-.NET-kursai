@@ -8,31 +8,111 @@
 </head>
 <body>
     <script>
-        // first
-        let array = [];
+        // // first
+        // let array = [];
+        // for (let i = 0; i < 10; i++){
+        //     let ar = [];
+        //     for (let a = 0; a < 5; a++){
+        //         let num = Math.floor(Math.random()*(25-5)+6);
+        //         ar.push(num);
+        //     }
+        //     array.push(ar);
+        // }
+        // console.log(array);
+
+        // // second
+        // // a
+        // let inst = 0;
+        // for (let c = 0; c < 10; c++){
+        //     let inst1 = 0;
+        //     for (let p = 0; p < 5; p++){
+        //         if (array[c][p] > 10){
+        //             inst1++;
+        //         }
+        //     }
+        //     console.log(inst1);
+        //     inst += inst1;
+        // }
+        // console.log(inst);
+
+        // // b
+        // let big = array[0][0];
+        // for (let b = 0; b < array.length; b++){
+        //     for (let m = 0; m < 5; m++){
+        //         if (array[b][m] > big){
+        //             big = array[b][m];
+        //         }
+        //     }
+        // }
+        // console.log(big);
+
+        // c
+        // let a = 0,
+        //     b = 0,
+        //     c = 0,
+        //     d = 0,
+        //     e = 0;
+        // for (let n = 0; n < array.length; n++){
+        //     for (let m = 0; m < 5; m++){
+        //         if (m == 0){
+        //             a += array[n][m];
+        //         } else if (m == 1){
+        //             b += array[n][m];
+        //         } else if (m == 2){
+        //             c += array[n][m];
+        //         } else if (m == 3){
+        //             d += array[n][m];
+        //         } else {
+        //             e += array[n][m];
+        //         }
+        //     }
+        // }
+        // console.log(a, b, c, d, e)
+
+        // // d
+        // for (let n = 0; n < array.length; n++){
+        //     while (array[n].length < 7){
+        //         array[n].push(Math.floor(Math.random()*(25-5)+6));
+        //     }
+        // }
+        // console.log(array)
+
+        // // e
+        // let newAr = [];
+        // for (let n = 0; n < array.length; n++){
+        //     let item = 0;
+        //     for (let m = 0; m < array[n].length ; m++){
+        //         item += array[n][m];
+        //     }
+        //     newAr.push(item);
+        //     item = 0;
+        // }
+        // console.log(newAr)
+
+        // third
+        let alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'],
+            array = [];
         for (let i = 0; i < 10; i++){
             let ar = [];
-            for (let a = 0; a < 5; a++){
-                let num = Math.floor(Math.random()*(20-6)+5);
-                ar.push(num);
+            let rand = Math.floor(Math.random()*20)+2;
+            for (let n = 0; n < rand; n++){
+                ar.push(alphabet[(Math.floor(Math.random()*26))]);
             }
-            array.push(ar);
+            ar.sort()
+            array.push(ar)
         }
-        console.log(array);
+        console.log(array)
 
-        // second
-        // a
-        let inst = 0;
-        for (let i = 0; i < 10; i++){
-            let inst1 = 0;
-            for (let p = 0; p < 5; p++){
-                if (array[i][p] > 10){
-                    inst1++;
+        // fourth
+        let short = [array[0],];
+        for (let b = 1; b < array.length; b++){
+            for (let a = 0; a < short.length; a++){
+                if (array[b].length < short[a].length){
+                    short.splice(a, 0, array[b]);
                 }
             }
         }
-        console.log(inst);
-
+        console.log(short);
 
     </script>
 </body>

@@ -13,75 +13,73 @@
 </head>
 <body>
     <div id="main">
-        <div id="content" class="padding"></div>
-        <div class="padding">
-            <div id="size"></div>
-            <div id="style"></div>
+        <div id="content" class="padding"> 
+            <label for="cont">Content:</label>
+            <input type="text" name="cont" id="cont" value="text">
+        </div>
+        <div class="text">
+            <div id="size">
+                <label for="font-size">Size:</label>
+                <input type="text" name="font-size" id="font-size" value="16">
+            </div>
+            <div id="style">
+                <label for="style">Style:</label>
+                <input type="checkbox" name="bold" id="style"> <label for="style">Bold</label>
+                <input type="checkbox" name="italic" id="style"> <label for="style">Italic</label>
+                <input type="checkbox" name="underline" id="style"> <label for="style"> Underline</label>
+            </div>
         </div>
         <div class="padding">
-            <div id="width"></div>
-            <div id="height"></div>
+            <div id="width">
+                <label for="width">Width:</label>
+                <input type="text" name="width" id="width" value="100">
+            </div>
+            <div id="height">
+                <label for="height">Height:</label>
+                <input type="text" name="height" id="height" value="100">
+            </div>
         </div>
-        <div id="align" class="padding"></div>
-        <div id="vertical" class="padding"></div>
+        <div id="align" class="padding">
+            <label for="align">Align: </label>
+            <input type="radio" name="align" id="left"> <label for="left">Left</label>
+            <input type="radio" name="align" id="middle" checked="checked"> <label for="middle">Middle</label>
+            <input type="radio" name="align" id="right"> <label for="right">Right</label>
+        </div>
+        <div id="vertical" class="padding">
+            <label for="vertical">Vetical: </label>
+            <input type="radio" name="vertical" id="top"> <label for="top">Top</label>
+            <input type="radio" name="vertical" id="center" checked="checked"> <label for="center">Middle</label>
+            <input type="radio" name="vertical" id="bottom"> <label for="bottom">Bottom</label>
+        </div>
         <div class="padding">
-            <div id="text-color"></div>
-            <div id="back-color"></div>
-            <div id="border-color"></div>
-            <div id="border-size"></div>
+            <div id="text-color">
+                <label for="text-color">Text Color: </label>
+                <input type="color" name="text-color" id="text-color">
+            </div>
+            <div id="back-color">
+                <label for="back-color">Back Color: </label>
+                <input type="color" name="back-color" id="back-color">
+            </div>
+            <div id="border-color">
+                <label for="border-color">Border Color: </label>
+                <input type="color" name="border-color" id="border-color">
+            </div>
+            <div id="border-size">
+                <label for="border-size">Border size: </label>
+                <input type="range" name="border-size" id="border-size" value="1">
+            </div>
         </div>
-        
-        <div id="padding" class="padding"></div>
-        <div id="myText"></div>
+        <div id="padding" class="padding">
+            <label for="padding">Padding: </label>
+            <input type="range" name="padding" id="padding" value="10">
+        </div>
+        <div id="myText">
+            <p id="display"></p>
+        </div>
 
     </div>
     <script> 
-        // function to get element by id
-        function getId (id) {
-            let x = document.getElementById(id);
-            return x;
-        }
-
-        getId("content").innerHTML += 'Content: <input type="text" id = "text-in">';
-        // getId("content").style.display = "block";
-
-        getId("size").innerHTML += 'Size: <input type="text" id = "size-in">';
-        getId("size").style.display = "inline-block";
-
-        getId("style").innerHTML += 'Style: <input type="checkbox" id = "input"> <input type="checkbox" id = "input"> <input type="checkbox" id = "input">';
-        getId("style").style.display = "inline-block";
-
-        getId("width").innerHTML += 'Width: <input type="text" id = "input">';
-        getId("width").style.display = "inline-block";
-
-        getId("height").innerHTML += 'Height: <input type="text" id = "input">';
-        getId("height").style.display = "inline-block";
-
-        getId("align").innerHTML += 'Align: <input type="radio" id = "input" value="left"> <label for="left">HTML</label> <input type="radio" id = "input" value="Middle"> <input type="radio" id = "input" value="Right">';
-        // getId("align").style.display = "block";
-
-        getId("vertical").innerHTML += 'Vertical: <input type="radio" id = "input" > <input type="radio" id = "input"> <input type="radio" id = "input">';
-        // getId("vertical").style.display = "block";
-
-        getId("text-color").innerHTML += 'Text Color: <input type="text" id = "input">';
-        getId("text-color").style.display = "inline-block";
-
-        getId("back-color").innerHTML += 'Back Color: <input type="text" id = "input">';
-        getId("back-color").style.display = "inline-block";
-
-        getId("border-color").innerHTML += 'Border Color: <input type="text" id = "input">';
-        getId("border-color").style.display = "inline-block";
-
-        getId("border-size").innerHTML += 'Border Size: <input type="text" id = "input">';
-        getId("border-size").style.display = "inline-block";
-
-        getId("padding").innerHTML += 'Padding: <input type="text" id = "input">';
-        // getId("padding").style.display = "block";
-
-        getId("myText").innerHTML += '<p></p>';
-        getId("myText").style.display = "flexbox";
-
-
+        
     </script>
 </body>
 </html>
