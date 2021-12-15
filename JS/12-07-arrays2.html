@@ -7,6 +7,9 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="array">
+
+    </div>
     <script>
         // // first
         // let array = [];
@@ -89,30 +92,136 @@
         // }
         // console.log(newAr)
 
-        // third
-        let alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'],
+        // // third
+        // let alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'],
+        //     array = [];
+        // for (let i = 0; i < 10; i++){
+        //     let ar = [];
+        //     let rand = Math.floor(Math.random()*19)+2;
+        //     for (let n = 0; n < rand; n++){
+        //         ar.push(alphabet[(Math.floor(Math.random()*26))]);
+        //     }
+        //     ar.sort()
+        //     array.push(ar)
+        // }
+        // console.log(array)
+
+        // // fourth
+        // let hasK = [];
+        // for (let c = 0; c < array.length; c++){
+        //     if (array[c].includes("k")){
+        //         hasK.push(array[c]);
+        //     }
+        // }
+        // console.log(hasK);
+        // for (let e = 1; e < hasK.length; e++){
+        //     for (let f = 0; f < e; f++)
+        //         if (hasK[e].length < hasK[f].length) {
+        //         var x = hasK[e];
+        //         hasK[e] = hasK[f];
+        //         hasK[f] = x;
+        //     }
+        // }
+        // console.log(hasK);
+        
+        // let noK = [];
+        // for (let d = 0; d < array.length; d++){
+        //     if (!array[d].includes("k")){
+        //         noK.push(array[d]);
+        //     }
+        // }
+        // console.log(noK);
+        // for (let g = 1; g < noK.length; g++){
+        //     for (let h = 0; h < g; h++)
+        //         if (noK[g].length < noK[h].length) {
+        //         var x = noK[g];
+        //         noK[g] = noK[h];
+        //         noK[h] = x;
+        //     }
+        // }
+        // console.log(noK);
+
+        // let final = [];
+        // for (let x = 0; x < hasK.length; x++){
+        //     final.push(hasK[x]);
+        // }
+        // for (let z = 0; z < noK.length; z++){
+        //     final.push(noK[z]);
+        // }
+        // console.log(final);
+
+        // var Arr = [1, 7, 2, 8, 3, 4, 5, 0, 9];
+        // for (var i = 1; i < Arr.length; i++)
+        //     for (var j = 0; j < i; j++)
+        //         if (Arr[i] < Arr[j]) {
+        //         var x = Arr[i];
+        //         Arr[i] = Arr[j];
+        //         Arr[j] = x;
+        //         }
+        // console.log(Arr);
+
+
+        // // fifth
+        // let arr = [];
+        // for (let i = 0; i < 10; i++){
+        //     let rand = Math.floor(Math.random()*6);
+        //     console.log(rand);
+        //     if (rand == 0){
+        //         arr.push(Math.floor(Math.random()*11));
+        //     } else {
+        //         let newArr = [];
+        //         for (let a = 0; a < rand; a++){
+        //             let num = (Math.floor(Math.random()*11));
+        //             newArr.push(num)
+        //         }
+        //         arr.push(newArr);
+        //     }
+        // }
+        // console.log(arr)
+
+        // // sixth
+        // let summed = [];
+        // for (let b = 0; b < 10; b++){
+        //     if (arr[b].length > 1){
+        //         let sum = 0;
+        //         for (let d = 0; d < arr[b].length; d++){
+        //             sum += arr[b][d];
+        //         }
+        //         summed.push(sum)
+        //     } else {
+        //         summed.push(arr[b][0]);
+        //     }
+        // }
+        // for (let v = 1; v < summed.length; v++){
+        //     for (var z = 0; z < v; z++)
+        //         if (summed[v] < summed[z]) {
+        //         var x = summed[v];
+        //         summed[v] = summed[z];
+        //         summed[z] = x;
+        //     }
+        // }
+        // console.log(summed)
+
+        // seventh
+        let colorCode = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F",],
+            values = ["#", "%", "+", "*", "@", "裡"],
             array = [];
-        for (let i = 0; i < 10; i++){
+        for(let i = 0; i < 10; i++){
             let ar = [];
-            let rand = Math.floor(Math.random()*20)+2;
-            for (let n = 0; n < rand; n++){
-                ar.push(alphabet[(Math.floor(Math.random()*26))]);
+            for(let p = 0; p < 10; p++){
+                let randColor = "#"
+                let ar1 = [];
+                for(let l = 0; l < 6; l++){
+                    randColor += colorCode[Math.floor(Math.random()*16)];
+                }
+                let randVal = values[Math.floor(Math.random()*6)];
+                ar1.push(randVal, randColor);
+                ar.push(ar1);
+                document.getElementById("array").innerHTML += '<div style="color: ' + randColor+ '"> ' + randVal + '</div>';
             }
-            ar.sort()
-            array.push(ar)
+            array.push(ar);
         }
         console.log(array)
-
-        // fourth
-        let short = [array[0],];
-        for (let b = 1; b < array.length; b++){
-            for (let a = 0; a < short.length; a++){
-                if (array[b].length < short[a].length){
-                    short.splice(a, 0, array[b]);
-                }
-            }
-        }
-        console.log(short);
 
     </script>
 </body>
