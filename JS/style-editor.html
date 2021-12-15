@@ -13,12 +13,12 @@
             display: inline-block;
         }
         #demo{
-            display: flexbox;
+            display: flex;
             font-size: 16px;
         }
     </style>
 </head>
-<body>
+<body onload="boxHeight(), boxWidth(), alignHor(), alignVer(), changeColor(), backColor(), border(), changePad()">
     <div id="main">
         <div class="padding"> 
             <label for="cont">Content:</label>
@@ -31,76 +31,95 @@
             </div>
             <div id="fontStyle" class="inline" onchange="changeStyle()">
                 <label for="style">Style:</label>
-                <input type="checkbox" name="bold" id="style"> <label for="style">Bold</label>
-                <input type="checkbox" name="italic" id="style"> <label for="style">Italic</label>
-                <input type="checkbox" name="underline" id="style"> <label for="style"> Underline</label>
+                <input type="checkbox" name="style" id="bold" onchange="changeBold()"> <label for="bold">Bold</label>
+                <input type="checkbox" name="style" id="italic" onchange="changeItalic()"> <label for="italic">Italic</label>
+                <input type="checkbox" name="style" id="underline" onchange="changeUnder()"> <label for="underline"> Underline</label>
             </div>
         </div>
         <div class="padding">
-            <div id="width" class="inline" onchange="boxWidth()">
+            <div id="widthID" class="inline" onchange="boxWidth()">
                 <label for="width">Width:</label>
-                <input type="text" name="width" id="width-set" value="100">
+                <input type="text" name="width" id="width" value="100">
             </div>
-            <div id="height" class="inline" onchange="boxHeight()">
+            <div id="heightID" class="inline" onchange="boxHeight()">
                 <label for="height">Height:</label>
-                <input type="text" name="height" id="height-set" value="100">
+                <input type="text" name="height" id="height" value="100">
             </div>
         </div>
-        <div id="align" class="padding">
+        <div id="align" class="padding" onchange="alignHor()">
             <label for="align">Align: </label>
             <input type="radio" name="align" id="left"> <label for="left">Left</label>
             <input type="radio" name="align" id="middle" checked="checked"> <label for="middle">Middle</label>
             <input type="radio" name="align" id="right"> <label for="right">Right</label>
         </div>
-        <div id="vertical" class="padding">
+        <div id="vertical" class="padding" onchange="alignVer()">
             <label for="vertical">Vetical: </label>
-            <input type="radio" name="vertical" id="top"> <label for="top">Top</label>
+            <input type="radio" name="vertical" id="top"><label for="top">Top</label>
             <input type="radio" name="vertical" id="center" checked="checked"> <label for="center">Middle</label>
             <input type="radio" name="vertical" id="bottom"> <label for="bottom">Bottom</label>
         </div>
-        <div class="padding">
+        <div class="padding" >
             <div id="color" class="inline" onchange="changeColor()">
                 <label for="color">Text Color: </label>
                 <input type="color" name="color" id="text-color" value="#ffffff">
             </div>
-            <div id="back-color" class="inline">
+            <div id="back-color" class="inline" onchange="backColor()">
                 <label for="back-color">Back Color: </label>
-                <input type="color" name="back-color" id="back-color" value="#000000">
+                <input type="color" name="back-color" id="background-color" value="#000000">
             </div>
-            <div id="border-color" class="inline">
+            <div id="border-col" class="inline" onchange="border()">
                 <label for="border-color">Border Color: </label>
                 <input type="color" name="border-color" id="border-color" value="#ff0000">
             </div>
-            <div id="border-size" class="inline">
+            <div id="border-s" class="inline" onchange="border()">
                 <label for="border-size">Border size: </label>
                 <input type="range" name="border-size" id="border-size" value="5">
             </div>
         </div>
-        <div id="padding" class="padding">
+        <div id="paddingDiv" class="padding">
             <label for="padding">Padding: </label>
-            <input type="range" name="padding" id="padding" value="10">
+            <input type="range" name="padding" id="padding" value="10" onchange="changePad()">
         </div>
         <div id="demo">
             text
         </div>
-        <!-- <button onclick="textReplace()">Try it</button> -->
     </div>
 
     <script> 
-
+    
         let myText = document.getElementById("demo");
+
         function textReplace(){
             myText.innerHTML = document.getElementById("cont").value;
-            myText.style.display = "flexbox";
         }
 
         function fontSize(){
-            myText.style.fontSize += "" + document.getElementById("font-size").value + "px";
+            myText.style.fontSize = "" + document.getElementById("font-size").value + "px";
         }
-
-        // function changeStyle(){
-        //     myText.style.fontStyle += "" + document.getElementById("style").name;
-        // }
+        
+        function changeBold(){
+            if (document.getElementById("bold").checked){
+                myText.style.fontWeight += "bold";
+            } else {
+                myText.style.fontWeight = "";
+            }
+        }
+        function changeItalic(){
+            if (document.getElementById("italic").checked){
+                myText.style.fontStyle += "italic";
+            }
+            else {
+                myText.style.fontStyle = "";
+            }
+        }
+        function changeUnder(){
+            if (document.getElementById("underline").checked){
+                myText.style.textDecoration += "underline";
+            }
+            else {
+                myText.style.textDecoration = "";
+            }
+        }
 
         function boxWidth(){
             myText.style.width = "" + document.getElementById("width").value + "px";
@@ -111,15 +130,38 @@
         }
 
         function alignHor(){
-            myText.style.fontSize += "" + document.getElementById("font-size").value + "px";
+            if (document.getElementById("left").checked){
+                myText.style.justifyContent = "flex-start";
+            } else if (document.getElementById("middle").checked){
+                myText.style.justifyContent = "center";
+            } else {
+                myText.style.justifyContent = "flex-end";
+            }
+            
         }
 
         function alignVer(){
-            myText.style.fontSize += "" + document.getElementById("font-size").value + "px";
+            if (document.getElementById("top").checked){
+                myText.style.alignItems = "flex-start";
+            } else if (document.getElementById("center").checked){
+                myText.style.alignItems = "center";
+            } else {
+                myText.style.alignItems = "flex-end";
+            }
         }
 
         function changeColor(){
             myText.style.color = "" + document.getElementById("text-color").value;
+        }
+        function backColor(){
+            myText.style.backgroundColor = "" + document.getElementById("background-color").value;
+        }
+        function border(){
+            myText.style.border = "" + document.getElementById("border-size").value + "px solid " + document.getElementById("border-color").value;
+        }
+
+        function changePad(){
+            myText.style.padding = "" + document.getElementById("padding").value + "px";
         }
         
     </script>
