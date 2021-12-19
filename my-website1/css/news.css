@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+}
+/* set column widths*/
+.col-1 {
+    width: 8.33%;
+}
+.col-2 {
+    width: 16.66%;
+}
+.col-3 {
+    width: 25%;
+}
+.col-4 {
+    width: 33.33%;
+}
+.col-5 {
+    width: 41.66%;
+}
+.col-6 {
+    width: 50%;
+}
+.col-7 {
+    width: 58.33%;
+}
+.col-8 {
+    width: 66.66%;
+}
+.col-9 {
+    width: 75%;
+}
+.col-10 {
+    width: 83.33%;
+}
+.col-11 {
+    width: 91.66%;
+}
+.col-12 {
+    width: 100%;
+}
+body{
+    background-color: rgb(235, 235, 235);
+    margin: 0em;
+    font-family: monospace;
+}
+
+/* MAIN STYLE */
+main {
+    padding: 0% 10%;
+}
+.cover {
+    padding: 2em 0em;
+    text-align: justify;
+}
+.double-header {
+    margin: 10px 0px 0px 0px;
+    border-bottom: 1px dashed lightgray;
+    float: left;
+    width: 100%;
+  }
+.heading {
+    width: 80%;
+    font-weight: 600;
+    text-transform: capitalize;
+    float: left;
+    padding: 0px;
+}
+.date {
+    float: right;
+    font-style: italic;
+    padding: 0px;
+}
+.container {
+    float: left;
+    text-align: justify;
+    padding-top: 10px;
+}
+.content {
+    margin: 0px;
+    padding-bottom: 10px;
+}
+a:link {
+    color: darkred;
+    text-decoration: none;
+}
+a:hover {
+    color: blue;
+    text-decoration: none;
+}
+a:visited {
+    color: deeppink;
+    text-decoration: none;
+}
+@media screen and (max-width: 700px) {
+    
+}
+@media screen and (min-width: 700px) {
+    
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
